@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>McCarverisms - Words of Wisdom</title>
+  <meta name="description" content="Great Calls by Tim McCarver">
+  <meta property="og:title" content="Inspirational Wisdom from Tim McCarver">
+  <meta property="og:url" content="http://www.mccarverisms.com">
+  <meta property="og:description" content="Inspirational Quotes from Tim McCarver">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='http://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+</head>
+<body>
+  <div class="mccarverism">
+    <h1 id="quote"></h1>
+  </div>
+
+  <script type="text/javascript">
+    var request = new XMLHttpRequest();
+    request.open('GET', 'data/mccarverisms.json', true);
+    request.send();
+
+    request.onload = function() {
+      var data = JSON.parse(this.response);
+      var quotes = data["mccarverisms"];
+      var el = document.getElementById("quote");
+      var quoteIndex = Math.floor(Math.random()*quotes.length);
+      el.innerText = quotes[quoteIndex]["quote"];
+    }
+  </script>
+</body>
+</html>
