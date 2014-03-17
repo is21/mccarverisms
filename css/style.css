@@ -18,13 +18,14 @@ body {
 }
 
 .mccarverism h1 {
+  text-align: right;
   margin: 0;
   font-family: 'Wire One', sans-serif;
   font-size: 72px;
   color: white;
   position: absolute;
   top: 100px;
-  left: 100px;
+  right: 100px;
   width: 45%;
 }
 
