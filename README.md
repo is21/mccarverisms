@@ -1,5 +1,6 @@
 mccarverisms
 ========
+Words of wisdom from Tim McCarver.
 
-Website for http://mccarverisms.com/
+http://is21.github.io/mccarverisms/
 
